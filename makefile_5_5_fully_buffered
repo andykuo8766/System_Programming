@@ -1,0 +1,10 @@
+TARGET=exe_fig5_5_fully_buffered
+
+$(TARGET): fig5_5_fully_buffered.o error.o
+	$(CC) -o $@ $^ 
+
+fig13_4.o: fig5_5_fully_buffered.c
+error.o: error.c
+
+clean:
+	rm -f fig5_5_fully_buffered.o error.o $(TARGET)
